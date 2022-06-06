@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    height: 100vh;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.heading{
+    color: rgb(81, 114, 103);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.btn{
+    border: 2px solid rgb(81, 114, 103);
+    color: rgb(81, 114, 103);
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+.btn:hover{
+    background-color: rgb(81, 114, 103);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.players{
+    display: flex;
+    justify-content: center;
+    padding: 20px 220px; 
+    margin-top: 20px;   
+}
+
+.player-X{
+    
+    border-bottom: 3px solid rgb(211, 209, 209);
+    padding-right: 60px; 
+    font-size: 20px;   
+}
+
+.player-O{
+    border-bottom: 3px solid rgb(211, 209, 209);
+    padding-right: 60px; 
+    font-size: 20px;
+}
+
+.tile-board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    flex-grow: 1;
+    grid-gap: 0px;
+    padding: 10px;
+}
+
+.tile{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.tile:hover{
+    background-color: rgb(247, 241, 241);
+}
+
+.tile:not(:nth-child(3n)){
+    border-right: 3px solid rgb(166, 214, 166);
+}
+
+.tile:not(:nth-last-child(-n+3)){
+    border-bottom: 3px solid rgb(166, 214, 166);
+}
+
+.tile-winner span{
+    color: greenyellow;
+}
